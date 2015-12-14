@@ -44,7 +44,7 @@ tmr.alarm(0, TIMEOUT, 1, function()
      end
 end )
 
-tmr.alarm(1, 10000, 1, function()
+tmr.alarm(4, 10000, 1, function()
     SDA_PIN = 6 -- sda pin, GPIO12
     SCL_PIN = 5 -- scl pin, GPIO14
     bh1750 = require("bh1750")
@@ -57,7 +57,7 @@ tmr.alarm(1, 10000, 1, function()
     -- release module
     bh1750 = nil
     package.loaded["bh1750"]=nil
-end)
+end )
 
 tmr.alarm(2, 10000, 1, function()
     pin = 4
